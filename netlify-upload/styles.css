@@ -544,6 +544,10 @@ h3 {
 .content-panel p,
 .vision-card p,
 .process-card p,
+.format-hero p,
+.format-card p,
+.format-panel p,
+.why-participate p,
 .fellowship-list p,
 .audience-grid p,
 .competition-copy p,
@@ -560,6 +564,8 @@ h3 {
 .vision-card,
 .aim-grid article,
 .process-card,
+.format-card,
+.format-panel,
 .fellowship-list article,
 .audience-grid article,
 .competition-card,
@@ -635,6 +641,7 @@ h3 {
 
 .panel-number,
 .process-step,
+.format-number,
 .aim-grid span {
   display: inline-grid;
   place-items: center;
@@ -823,6 +830,232 @@ h3 {
   color: var(--white);
   border-color: rgba(255, 255, 255, 0.18);
   background: rgba(255, 255, 255, 0.1);
+}
+
+.format-section {
+  background:
+    radial-gradient(circle at 8% 12%, rgba(67, 181, 162, 0.14), transparent 22rem),
+    linear-gradient(180deg, #fffaf1, #f6efe3 52%, var(--paper-warm));
+}
+
+.format-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 2rem;
+  align-items: stretch;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  color: var(--white);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 92% 8%, rgba(242, 187, 89, 0.24), transparent 16rem),
+    linear-gradient(135deg, #151d1c, #2f5f55);
+  box-shadow: var(--shadow-strong);
+}
+
+.format-hero p:not(.section-kicker),
+.format-card-dark p,
+.format-card-dark .chip-row span {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.format-tagline {
+  margin-bottom: 1.2rem;
+  color: #ffe0a3;
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.format-price-card {
+  display: grid;
+  align-content: center;
+  padding: 1.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(16px);
+}
+
+.format-price-card span,
+.format-price-card small {
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 800;
+}
+
+.format-price-card span {
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.format-price-card strong {
+  margin: 0.15rem 0;
+  color: #ffe0a3;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.format-price-card p {
+  margin-bottom: 1rem;
+}
+
+.format-grid,
+.prep-debate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.format-card {
+  min-height: 300px;
+  padding: 1.5rem;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    border-color 200ms ease;
+}
+
+.format-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(232, 92, 79, 0.34);
+  box-shadow: 0 28px 70px rgba(17, 24, 23, 0.17);
+}
+
+.format-card-dark {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.16);
+  background:
+    radial-gradient(circle at 86% 12%, rgba(232, 92, 79, 0.28), transparent 15rem),
+    linear-gradient(140deg, #151d1c, #2b4843);
+}
+
+.format-panel {
+  padding: 1.5rem;
+}
+
+.panel-heading-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.3rem;
+}
+
+.panel-heading-row .section-kicker {
+  margin-bottom: 0;
+}
+
+.panel-heading-row strong {
+  flex: 0 0 auto;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  color: var(--ink);
+  background: var(--amber);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.time-stack {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.time-stack div,
+.debate-timeline li {
+  position: relative;
+  padding: 1rem 1rem 1rem 4.9rem;
+  border: 1px solid rgba(17, 24, 23, 0.1);
+  border-radius: var(--radius);
+  background: rgba(255, 250, 241, 0.74);
+}
+
+.time-stack span,
+.debate-timeline span {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: inline-grid;
+  place-items: center;
+  width: 3.1rem;
+  min-height: 2.2rem;
+  border-radius: var(--radius);
+  color: var(--white);
+  background: var(--coral);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.time-stack h3 {
+  margin-bottom: 0.28rem;
+}
+
+.time-stack p,
+.debate-timeline p {
+  margin-bottom: 0;
+}
+
+.debate-timeline {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.judging-block,
+.why-participate {
+  margin-top: 1rem;
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.66);
+  box-shadow: var(--shadow);
+}
+
+.judging-block .section-heading {
+  margin-bottom: 1.4rem;
+}
+
+.criteria-grid,
+.benefit-grid {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.criteria-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.benefit-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.criteria-grid span,
+.benefit-grid span {
+  min-width: 0;
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  padding: 0.78rem 0.9rem;
+  border: 1px solid rgba(17, 24, 23, 0.11);
+  border-radius: var(--radius);
+  color: var(--ink-soft);
+  background: rgba(255, 250, 241, 0.78);
+  font-size: 0.84rem;
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.why-participate {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 2rem;
+  align-items: start;
+  background:
+    radial-gradient(circle at 92% 12%, rgba(242, 187, 89, 0.22), transparent 16rem),
+    rgba(255, 255, 255, 0.72);
 }
 
 .chip-row {
@@ -1161,6 +1394,11 @@ h3 {
   .future-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .format-hero,
+  .benefit-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 940px) {
@@ -1212,6 +1450,9 @@ h3 {
 
   .hero-grid,
   .split-layout,
+  .format-hero,
+  .prep-debate-grid,
+  .why-participate,
   .fellowship-grid,
   .stand-layout,
   .competition-layout {
@@ -1232,6 +1473,7 @@ h3 {
 
   .two-panel-grid,
   .vision-grid,
+  .format-grid,
   .audience-grid {
     grid-template-columns: 1fr;
   }
@@ -1347,6 +1589,11 @@ h3 {
   .content-panel,
   .vision-card,
   .process-card,
+  .format-hero,
+  .format-card,
+  .format-panel,
+  .judging-block,
+  .why-participate,
   .fellowship-list article,
   .stand-card,
   .audience-grid article,
@@ -1371,9 +1618,24 @@ h3 {
 
   .aim-grid article,
   .process-card,
+  .format-card,
   .audience-grid article,
   .future-grid span {
     min-height: auto;
+  }
+
+  .criteria-grid,
+  .benefit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-heading-row {
+    display: grid;
+  }
+
+  .time-stack div,
+  .debate-timeline li {
+    padding: 4.2rem 1rem 1rem;
   }
 
   .process-card,
