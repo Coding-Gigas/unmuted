@@ -597,6 +597,10 @@ h3 {
   font-size: 1.55rem;
 }
 
+.founder-card h3 + .card-label {
+  margin-top: 1.15rem;
+}
+
 .section-heading {
   max-width: 760px;
   margin-bottom: 3rem;
